@@ -44,3 +44,9 @@ npm run preview
 - Vanilla JavaScript
 - CSS3 (Glass morphism, animations)
 
+
+
+
+
+
+
