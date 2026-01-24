@@ -133,6 +133,10 @@ body {
     animation-delay: 0.4s;
 }
 
+.checklist-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
 @keyframes slideInLeft {
     from {
         opacity: 0;
