@@ -76,8 +76,87 @@ body {
     font-size: 16px;
     color: #000000;
     line-height: 1.6;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     opacity: 0.8;
+}
+
+.features-checklist {
+    margin-bottom: 40px;
+    text-align: left;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 24px;
+    animation: fadeIn 0.8s ease-in 0.2s both;
+}
+
+.features-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.checklist-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    font-size: 16px;
+    color: #000000;
+    border-bottom: 1px solid #e0e0e0;
+    animation: slideInLeft 0.5s ease-out both;
+}
+
+.checklist-item:last-child {
+    border-bottom: none;
+}
+
+.checklist-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.checklist-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.checklist-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.checklist-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.check-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 12px;
+    flex-shrink: 0;
 }
 
 .back-button {
@@ -115,6 +194,19 @@ body {
     
     .instruction {
         font-size: 15px;
+    }
+    
+    .features-checklist {
+        padding: 20px;
+    }
+    
+    .features-title {
+        font-size: 16px;
+    }
+    
+    .checklist-item {
+        font-size: 15px;
+        padding: 10px 0;
     }
     
     .back-button {
