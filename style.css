@@ -1,20 +1,3 @@
-:root {
-    --orange-primary: #e85d04;
-    --orange-dark: #d45103;
-    --orange-light: #f48c06;
-    --orange-soft: #ff9f1c;
-    --orange-bg: #fff5ee;
-    --orange-border: rgba(232, 93, 4, 0.25);
-    --text-dark: #1a1a1a;
-    --text-muted: #5c5c5c;
-    --white: #ffffff;
-    --shadow: 0 4px 20px rgba(232, 93, 4, 0.12);
-    --shadow-hover: 0 8px 28px rgba(232, 93, 4, 0.2);
-    --transition-fast: 0.2s ease;
-    --transition-smooth: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -23,31 +6,29 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background: linear-gradient(160deg, #fff9f5 0%, #ffefe6 50%, #fff5ee 100%);
-    color: var(--text-dark);
+    background-color: #ffffff;
+    color: #000000;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 24px;
-    transition: background 0.5s ease;
+    padding: 20px;
 }
 
 .container {
     width: 100%;
-    max-width: 520px;
+    max-width: 500px;
 }
 
 .content {
     text-align: center;
-    animation: fadeInUp 0.7s var(--transition-smooth) forwards;
-    opacity: 0;
+    animation: fadeIn 0.6s ease-in;
 }
 
-@keyframes fadeInUp {
+@keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(28px);
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
@@ -56,107 +37,64 @@ body {
 }
 
 .success-icon {
-    margin-bottom: 28px;
-    color: var(--orange-primary);
-    animation: scaleIn 0.6s var(--transition-bounce) 0.15s forwards;
-    opacity: 0;
-    transform: scale(0.6);
-    transition: transform var(--transition-smooth), color var(--transition-fast);
-}
-
-.success-icon:hover {
-    transform: scale(1.05);
-    color: var(--orange-dark);
+    margin-bottom: 30px;
+    color: #000000;
+    animation: scaleIn 0.5s ease-out;
 }
 
 @keyframes scaleIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
     to {
-        opacity: 1;
         transform: scale(1);
+        opacity: 1;
     }
 }
 
 .success-icon svg {
     display: inline-block;
-    filter: drop-shadow(0 2px 8px rgba(232, 93, 4, 0.25));
 }
 
 .title {
     font-size: 28px;
-    font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: 12px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 20px;
     line-height: 1.3;
-    letter-spacing: -0.02em;
-    transition: color var(--transition-fast);
 }
 
 .welcome-message {
     font-size: 20px;
-    color: var(--orange-dark);
-    margin-bottom: 20px;
-    font-weight: 600;
-    transition: color var(--transition-fast);
+    color: #000000;
+    margin-bottom: 15px;
+    font-weight: 500;
 }
 
 .instruction {
     font-size: 16px;
-    color: var(--text-muted);
-    line-height: 1.65;
-    margin-bottom: 20px;
-    padding: 0 8px;
-    transition: color var(--transition-fast);
-}
-
-.instruction strong {
-    color: var(--orange-primary);
-    font-weight: 600;
-}
-
-.sign-in-hint {
-    font-size: 14px;
-    color: var(--text-muted);
-    line-height: 1.5;
-    margin-bottom: 24px;
-    padding: 12px 16px;
-    background: rgba(232, 93, 4, 0.08);
-    border-radius: 10px;
-    border-left: 4px solid var(--orange-primary);
-    text-align: left;
-    animation: fadeInUp 0.5s var(--transition-smooth) 0.4s both;
-    transition: background var(--transition-fast), border-color var(--transition-fast);
-}
-
-.sign-in-hint:hover {
-    background: rgba(232, 93, 4, 0.12);
+    color: #000000;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0.8;
 }
 
 .features-checklist {
-    margin-bottom: 32px;
+    margin-bottom: 40px;
     text-align: left;
-    background: var(--white);
-    border-radius: 16px;
-    padding: 26px 28px;
-    box-shadow: var(--shadow);
-    border: 1px solid var(--orange-border);
-    animation: fadeInUp 0.6s var(--transition-smooth) 0.25s both;
-    opacity: 0;
-    transition: box-shadow var(--transition-smooth), transform var(--transition-fast), border-color var(--transition-fast);
-}
-
-.features-checklist:hover {
-    box-shadow: var(--shadow-hover);
-    border-color: rgba(232, 93, 4, 0.35);
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 24px;
+    animation: fadeIn 0.8s ease-in 0.2s both;
 }
 
 .features-title {
     font-size: 18px;
-    font-weight: 700;
-    color: var(--orange-dark);
-    margin-bottom: 18px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 16px;
     text-align: center;
-    letter-spacing: 0.02em;
-    transition: color var(--transition-fast);
 }
 
 .checklist {
@@ -168,17 +106,11 @@ body {
 .checklist-item {
     display: flex;
     align-items: center;
-    padding: 14px 0;
+    padding: 12px 0;
     font-size: 16px;
-    color: var(--text-dark);
-    border-bottom: 1px solid rgba(232, 93, 4, 0.12);
-    animation: slideInLeft 0.5s var(--transition-smooth) both;
-    transition: background var(--transition-fast), padding-left var(--transition-fast), color var(--transition-fast);
-}
-
-.checklist-item:hover {
-    padding-left: 8px;
-    background: rgba(232, 93, 4, 0.04);
+    color: #000000;
+    border-bottom: 1px solid #e0e0e0;
+    animation: slideInLeft 0.5s ease-out both;
 }
 
 .checklist-item:last-child {
@@ -186,21 +118,21 @@ body {
 }
 
 .checklist-item:nth-child(1) {
-    animation-delay: 0.35s;
+    animation-delay: 0.1s;
 }
 
 .checklist-item:nth-child(2) {
-    animation-delay: 0.45s;
+    animation-delay: 0.2s;
 }
 
 .checklist-item:nth-child(3) {
-    animation-delay: 0.55s;
+    animation-delay: 0.3s;
 }
 
 @keyframes slideInLeft {
     from {
         opacity: 0;
-        transform: translateX(-24px);
+        transform: translateX(-20px);
     }
     to {
         opacity: 1;
@@ -212,90 +144,69 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 26px;
-    height: 26px;
-    background: linear-gradient(135deg, var(--orange-primary), var(--orange-light));
-    color: var(--white);
+    width: 24px;
+    height: 24px;
+    background-color: #000000;
+    color: #ffffff;
     border-radius: 50%;
     font-size: 14px;
     font-weight: bold;
-    margin-right: 14px;
+    margin-right: 12px;
     flex-shrink: 0;
-    box-shadow: 0 2px 8px rgba(232, 93, 4, 0.35);
-    transition: transform var(--transition-bounce), box-shadow var(--transition-smooth);
-}
-
-.checklist-item:hover .check-icon {
-    transform: scale(1.1);
-    box-shadow: 0 4px 12px rgba(232, 93, 4, 0.4);
 }
 
 .back-button {
-    background: linear-gradient(135deg, var(--orange-primary), var(--orange-light));
-    color: var(--white);
+    background-color: #000000;
+    color: #ffffff;
     border: none;
-    padding: 16px 36px;
-    font-size: 17px;
+    padding: 14px 32px;
+    font-size: 16px;
     font-weight: 600;
-    border-radius: 12px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: all var(--transition-smooth);
-    min-width: 220px;
-    box-shadow: 0 4px 16px rgba(232, 93, 4, 0.35);
-    letter-spacing: 0.02em;
-    animation: fadeInUp 0.5s var(--transition-smooth) 0.5s both;
-    opacity: 0;
+    transition: all 0.3s ease;
+    min-width: 180px;
 }
 
 .back-button:hover {
-    background: linear-gradient(135deg, var(--orange-dark), var(--orange-primary));
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(232, 93, 4, 0.45);
+    background-color: #333333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .back-button:active {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(232, 93, 4, 0.4);
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 480px) {
-    body {
-        padding: 20px;
-    }
-
     .title {
         font-size: 24px;
     }
-
+    
     .welcome-message {
         font-size: 18px;
     }
-
+    
     .instruction {
         font-size: 15px;
     }
-
-    .sign-in-hint {
-        font-size: 13px;
-        padding: 10px 14px;
-    }
-
+    
     .features-checklist {
-        padding: 22px 20px;
+        padding: 20px;
     }
-
+    
     .features-title {
-        font-size: 17px;
+        font-size: 16px;
     }
-
+    
     .checklist-item {
         font-size: 15px;
-        padding: 12px 0;
+        padding: 10px 0;
     }
-
+    
     .back-button {
         width: 100%;
-        padding: 16px 28px;
-        font-size: 16px;
+        padding: 16px 32px;
     }
 }
